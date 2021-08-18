@@ -14,7 +14,8 @@ const App = () => {
   return (
     <Router>
       <div className="wrapper">
-        <nav>
+
+        <nav >
           <NavLink to="/" exact activeClassName="selected">Home</NavLink>
           <NavLink to="/default-chart" activeClassName="selected">Deault Chart</NavLink>
           <NavLink to="/pan-zoom-chart" activeClassName="selected">Pan & Zoom Chart</NavLink>
@@ -25,7 +26,7 @@ const App = () => {
           <NavLink to="/edit-node" activeClassName="selected">Edit Node</NavLink>
         </nav>
 
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={CustomNodeChart} />
         <Route path="/default-chart" component={DefaultChart} />
         <Route path="/pan-zoom-chart" component={PanZoomChart} />
         <Route path="/custom-node-chart" component={CustomNodeChart} />

@@ -47,8 +47,9 @@ const ChartNode = ({
     .filter(item => item)
     .join(" ");
 
-    const typeName = title => {
-      return (title.indexOf("Hong Miao") > -1 ? "true" : "false");
+  const typeName = title => {
+      //return (title.indexOf("Hong Miao") > -1 ? "true" : "false");
+      return "false";
   };
   useEffect(() => {
     const subs1 = dragNodeService.getDragInfo().subscribe(draggedInfo => {

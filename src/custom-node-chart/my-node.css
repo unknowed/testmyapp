@@ -34,3 +34,147 @@
   padding: 2px;
   border: 1px solid #215a88;
 }
+
+
+/* ------------------------ */
+.orgchart-container{
+  border: none;
+  background: transparent;
+  height: auto;
+}
+
+.orgchart.myChart {
+  background-image: none !important;
+}
+
+body{
+  background: #fafafa;
+  height: auto;
+}
+
+.orgchart.myChart > ul > li > ul li::before {
+  border-top: #ccc dashed 2px;
+}
+
+.orgchart.myChart > ul > li > ul li .oc-node::before, .orgchart.myChart ul li .oc-node:not(:only-child)::after {
+  background-color: #ddd;
+}
+
+.orgchart ul li .oc-node:hover, .orgchart ul li .oc-node.selected {
+  background-color: rgba(226, 226, 226, 0.5);
+}
+
+
+.bes-contenedor{
+  box-shadow: 1px 1px 13px #ccc;
+  border-radius: 8px;
+  padding: 6px;
+  text-align: center;
+  color: #666;
+  font-size: 0.92em;
+}
+
+.bes-imagen{
+  width: 100px;
+  border-radius: 100px;
+  border: 5px solid;
+  border-color: #6d6767;
+  height: 100px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.bes-imagen-color-1{
+  border-color: #457aca;
+}
+.bes-imagen-color-2{
+  border-color: #ca6045;
+}
+
+.bes-imagen-inner{
+  width: 90px;
+  border-radius: 100px;
+  margin: 5px;
+  height:90px;
+  overflow: hidden;
+
+}
+.bes-imagen img{
+  width: 130%;
+  height: auto;
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+
+.bes-contenedor-info{
+  width: 120px;
+}
+
+.bes-nombre{
+  font-size: 1.1em;
+    font-weight: bold;
+}
+.bes-nombre-color-1{
+  color: #457aca;
+}
+.bes-nombre-color-2{
+  color: #ca6045;
+}
+
+.bes-title{
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.bes-contenedor-contact{
+  background: #f9f9f9;
+  width: 135px;
+  height: -webkit-fill-available;
+  position: absolute;
+  top: 0px;
+  left: 130px;
+  z-index: 99;
+  min-height: 170px;
+  border: 1px solid #ddd;
+  text-align: left;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #666;
+  font-size: 0.8em;
+  line-height: 1.2em;
+  overflow: auto;
+}
+
+
+
+
+/* ------------------------ */
+.header{
+  text-align: center;
+  vertical-align: top;
+  margin-top: 50px;
+}
+
+.header-image{
+  display: inline-block;
+    top: 50px;
+    position: absolute;
+    left: 10%;
+}
+.header-image img{
+  width: 200px;
+}
+
+.header-title{
+  display: inline-block;
+  color: #555;
+}
+.header-title h1 {
+  font-weight: normal;
+  margin: 0px;
+}
+.header-title h2 {
+  margin: 0px;
+  font-weight: normal;
+}

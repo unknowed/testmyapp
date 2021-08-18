@@ -7,15 +7,50 @@ const propTypes = {
 };
 
 const MyNode = ({ nodeData }) => {
-  const selectNode = () => {
+
+  const selectNode = (b) => {
+    //nodeData.show = !nodeData.show;
     alert("Hi All. I'm " + nodeData.name + ". I'm a " + nodeData.title + ".");
   };
 
+  const imageColor = nivel => {
+    let clase ="bes-imagen ";
+    if (nivel > 0) clase += "bes-imagen-color-" + nivel + " ";
+    return clase;
+  };
+
+  const nombreColor = nivel => {
+    let clase ="bes-nombre ";
+    if (nivel > 0) clase += "bes-nombre-color-" + nivel + " ";
+    return clase;
+  };
+
   return (
-    <div onClick={selectNode}>
-      <div className="position">{nodeData.title}</div>
-      <div className="fullname">{nodeData.name} < img className = "oc-imageMio"
-                    src = "http://www.fabricadeexperiencias.com.mx//uploads/editorI20190114111112.jpg" / ></div>
+    <div onClick={selectNode} >
+
+      <div className="bes-contenedor">
+        <div className={ imageColor(nodeData.nivel) }>
+          <div className="bes-imagen-inner">
+            <img src = {nodeData.foto} / >
+          </div>
+        </div>
+        <div className="bes-contenedor-info">
+          <div className={ nombreColor(nodeData.nivel) }>
+            {nodeData.name}
+          </div>
+          <div className="bes-title">
+            {nodeData.title}
+          </div>
+        </div>
+      </div>
+
+      <div className="bes-contenedor-contact" style={nodeData.show ? {} : { display: 'none' }} >
+        <p>{nodeData.bio}</p>
+        <p></p>
+        <p><b>Tel.</b> {nodeData.tel}</p>
+        <p><b>Correo</b> {nodeData.email}</p>
+      </div>
+
     </div>
   );
 };
